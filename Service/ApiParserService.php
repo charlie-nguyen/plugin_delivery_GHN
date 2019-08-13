@@ -5,7 +5,7 @@
  * Time: 2:24 PM
  */
 
-namespace Plugin\GHNDelivery\Service;
+namespace Plugin\OSGHNDelivery\Service;
 
 
 class ApiParserService

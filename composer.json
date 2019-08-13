@@ -1,5 +1,5 @@
 {
-  "name": "ec-cube/GHNDelivery",
+  "name": "ec-cube/OSGHNDelivery",
   "version": "1.0.0",
   "description": "Giao hang nhanh delivery",
   "type": "eccube-plugin",
@@ -7,6 +7,6 @@
     "ec-cube/plugin-installer": "~0.0.7"
   },
   "extra": {
-    "code": "GHNDelivery"
+    "code": "OSGHNDelivery"
   }
 }

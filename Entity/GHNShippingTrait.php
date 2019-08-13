@@ -5,14 +5,14 @@
  * Time: 2:29 PM
  */
 
-namespace Plugin\GHNDelivery\Entity;
+namespace Plugin\OSGHNDelivery\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Eccube\Annotation as Eccube;
 
 /**
  * Trait GHNShippingTrait
- * @package Plugin\GHNDelivery\Entity
+ * @package Plugin\OSGHNDelivery\Entity
  *
  * @Eccube\EntityExtension("Eccube\Entity\Shipping")
  */
@@ -52,7 +52,7 @@ trait GHNShippingTrait
 
     /**
      * @var ?GHNPref
-     * @ORM\ManyToOne(targetEntity="Plugin\GHNDelivery\Entity\GHNPref", inversedBy="Shippings")
+     * @ORM\ManyToOne(targetEntity="Plugin\OSGHNDelivery\Entity\GHNPref", inversedBy="Shippings")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="ghn_pref_id", referencedColumnName="id", nullable=true, onDelete="SET NULL")
      * })
@@ -62,7 +62,7 @@ trait GHNShippingTrait
     /**
      * @var GHNService|null
      *
-     * @ORM\OneToOne(targetEntity="Plugin\GHNDelivery\Entity\GHNService", mappedBy="Shipping")
+     * @ORM\OneToOne(targetEntity="Plugin\OSGHNDelivery\Entity\GHNService", mappedBy="Shipping")
      */
     private $GHNService;
 

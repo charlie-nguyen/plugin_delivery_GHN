@@ -5,11 +5,11 @@
  * Time: 2:56 PM
  */
 
-namespace Plugin\GHNDelivery\Form\Type\Front;
+namespace Plugin\OSGHNDelivery\Form\Type\Front;
 
 use Doctrine\ORM\EntityRepository;
 use Eccube\Entity\Shipping;
-use Plugin\GHNDelivery\Entity\GHNPref;
+use Plugin\OSGHNDelivery\Entity\GHNPref;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;

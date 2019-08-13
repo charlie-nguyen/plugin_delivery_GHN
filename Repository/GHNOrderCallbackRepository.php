@@ -5,17 +5,17 @@
  * Time: 2:26 PM
  */
 
-namespace Plugin\GHNDelivery\Repository;
+namespace Plugin\OSGHNDelivery\Repository;
 
 
 use Doctrine\Common\Persistence\ManagerRegistry;
 use Eccube\Repository\AbstractRepository;
-use Plugin\GHNDelivery\Entity\GHNOrder;
-use Plugin\GHNDelivery\Entity\GHNOrderCallback;
+use Plugin\OSGHNDelivery\Entity\GHNOrder;
+use Plugin\OSGHNDelivery\Entity\GHNOrderCallback;
 
 /**
  * Class GHNOrderCallbackRepository
- * @package Plugin\GHNDelivery\Repository
+ * @package Plugin\OSGHNDelivery\Repository
  */
 class GHNOrderCallbackRepository extends AbstractRepository
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Plugin\GHNDelivery\Form\Type\Admin;
+namespace Plugin\OSGHNDelivery\Form\Type\Admin;
 
-use Plugin\GHNDelivery\Entity\GHNConfig;
+use Plugin\OSGHNDelivery\Entity\GHNConfig;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;

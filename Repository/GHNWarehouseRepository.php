@@ -5,15 +5,15 @@
  * Time: 5:07 PM
  */
 
-namespace Plugin\GHNDelivery\Repository;
+namespace Plugin\OSGHNDelivery\Repository;
 
 
 use Doctrine\Common\Persistence\ManagerRegistry;
 use Eccube\Entity\BaseInfo;
 use Eccube\Repository\AbstractRepository;
 use Eccube\Repository\BaseInfoRepository;
-use Plugin\GHNDelivery\Entity\GHNWarehouse;
-use Plugin\GHNDelivery\Service\ApiService;
+use Plugin\OSGHNDelivery\Entity\GHNWarehouse;
+use Plugin\OSGHNDelivery\Service\ApiService;
 
 class GHNWarehouseRepository extends AbstractRepository
 {

@@ -5,7 +5,7 @@
  * Time: 1:38 PM
  */
 
-namespace Plugin\GHNDelivery\Entity;
+namespace Plugin\OSGHNDelivery\Entity;
 
 
 use Eccube\Entity\AbstractEntity;

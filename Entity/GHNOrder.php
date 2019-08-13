@@ -5,7 +5,7 @@
  * Time: 11:47 AM
  */
 
-namespace Plugin\GHNDelivery\Entity;
+namespace Plugin\OSGHNDelivery\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -15,10 +15,10 @@ use Eccube\Entity\Shipping;
 
 /**
  * Class GHNOrder
- * @package Plugin\GHNDelivery\Entity
+ * @package Plugin\OSGHNDelivery\Entity
  *
  * @ORM\Table(name="plg_ghn_order")
- * @ORM\Entity(repositoryClass="Plugin\GHNDelivery\Repository\GHNOrderRepository")
+ * @ORM\Entity(repositoryClass="Plugin\OSGHNDelivery\Repository\GHNOrderRepository")
  */
 class GHNOrder extends AbstractEntity
 {
@@ -54,7 +54,7 @@ class GHNOrder extends AbstractEntity
     /**
      * @var GHNService
      *
-     * @ORM\OneToOne(targetEntity="Plugin\GHNDelivery\Entity\GHNService")
+     * @ORM\OneToOne(targetEntity="Plugin\OSGHNDelivery\Entity\GHNService")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="service_id", referencedColumnName="id", onDelete="SET NULL")
      * })
@@ -64,7 +64,7 @@ class GHNOrder extends AbstractEntity
     /**
      * @var GHNWarehouse
      *
-     * @ORM\ManyToOne(targetEntity="Plugin\GHNDelivery\Entity\GHNWarehouse")
+     * @ORM\ManyToOne(targetEntity="Plugin\OSGHNDelivery\Entity\GHNWarehouse")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="warehouse_id", referencedColumnName="id", onDelete="SET NULL")
      * })
@@ -372,7 +372,7 @@ class GHNOrder extends AbstractEntity
 
     /**
      * @var GHNOrderCallback[]
-     * @ORM\OneToMany(targetEntity="Plugin\GHNDelivery\Entity\GHNOrderCallback", mappedBy="GHNOrder")
+     * @ORM\OneToMany(targetEntity="Plugin\OSGHNDelivery\Entity\GHNOrderCallback", mappedBy="GHNOrder")
      */
     private $GHNOrderCallbacks;
 

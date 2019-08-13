@@ -5,7 +5,7 @@
  * Time: 2:03 PM
  */
 
-namespace Plugin\GHNDelivery\Service\PurchaseFlow;
+namespace Plugin\OSGHNDelivery\Service\PurchaseFlow;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Eccube\Annotation\ShoppingFlow;
@@ -14,11 +14,11 @@ use Eccube\Entity\Order;
 use Eccube\Entity\OrderItem;
 use Eccube\Service\PurchaseFlow\ItemHolderPreprocessor;
 use Eccube\Service\PurchaseFlow\PurchaseContext;
-use Plugin\GHNDelivery\Repository\GHNDeliveryRepository;
+use Plugin\OSGHNDelivery\Repository\GHNDeliveryRepository;
 
 /**
  * Class GHNProcessor
- * @package Plugin\GHNDelivery\Service\PurchaseFlow
+ * @package Plugin\OSGHNDelivery\Service\PurchaseFlow
  *
  * @ShoppingFlow()
  */

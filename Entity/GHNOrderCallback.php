@@ -5,7 +5,7 @@
  * Time: 2:08 PM
  */
 
-namespace Plugin\GHNDelivery\Entity;
+namespace Plugin\OSGHNDelivery\Entity;
 
 
 use Eccube\Entity\AbstractEntity;
@@ -13,10 +13,10 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Class GHNOrderCallback
- * @package Plugin\GHNDelivery\Entity
+ * @package Plugin\OSGHNDelivery\Entity
  *
  * @ORM\Table(name="plg_ghn_order_callback")
- * @ORM\Entity(repositoryClass="Plugin\GHNDelivery\Repository\GHNOrderCallbackRepository")
+ * @ORM\Entity(repositoryClass="Plugin\OSGHNDelivery\Repository\GHNOrderCallbackRepository")
  */
 class GHNOrderCallback extends AbstractEntity
 {
@@ -34,7 +34,7 @@ class GHNOrderCallback extends AbstractEntity
     /**
      * @var GHNOrder
      *
-     * @ORM\ManyToOne(targetEntity="Plugin\GHNDelivery\Entity\GHNOrder", inversedBy="GHNOrderCallbacks")
+     * @ORM\ManyToOne(targetEntity="Plugin\OSGHNDelivery\Entity\GHNOrder", inversedBy="GHNOrderCallbacks")
      * @ORM\JoinColumn(name="ghn_order_id", referencedColumnName="id", nullable=true)
      */
     private $GHNOrder;

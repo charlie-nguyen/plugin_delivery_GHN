@@ -5,14 +5,14 @@
  * Time: 1:48 PM
  */
 
-namespace Plugin\GHNDelivery\Entity;
+namespace Plugin\OSGHNDelivery\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Eccube\Annotation as Eccube;
 
 /**
  * Trait GHNOrderTrait
- * @package Plugin\GHNDelivery\Entity
+ * @package Plugin\OSGHNDelivery\Entity
  *
  * @Eccube\EntityExtension("Eccube\Entity\Order")
  */

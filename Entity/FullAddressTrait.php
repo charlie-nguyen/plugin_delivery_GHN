@@ -5,14 +5,14 @@
  * Time: 3:33 PM
  */
 
-namespace Plugin\GHNDelivery\Entity;
+namespace Plugin\OSGHNDelivery\Entity;
 
 
 use Eccube\Entity\Master\Pref;
 
 /**
  * Trait FullAddressTrait
- * @package Plugin\GHNDelivery\Entity
+ * @package Plugin\OSGHNDelivery\Entity
  *
  * @internal Eccube\Entity\Shipping|Eccube\Entity\Order|Eccube\Entity\Customer
  *

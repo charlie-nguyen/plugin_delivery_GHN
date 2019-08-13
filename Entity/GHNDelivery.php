@@ -5,7 +5,7 @@
  * Time: 2:27 PM
  */
 
-namespace Plugin\GHNDelivery\Entity;
+namespace Plugin\OSGHNDelivery\Entity;
 
 
 use Eccube\Entity\AbstractEntity;
@@ -14,17 +14,17 @@ use Eccube\Entity\Delivery;
 
 /**
  * Class GHNDelivery
- * @package Plugin\GHNDelivery\Entity
+ * @package Plugin\OSGHNDelivery\Entity
  *
  * @ORM\Table(name="plg_ghn_delivery")
- * @ORM\Entity(repositoryClass="Plugin\GHNDelivery\Repository\GHNDeliveryRepository")
+ * @ORM\Entity(repositoryClass="Plugin\OSGHNDelivery\Repository\GHNDeliveryRepository")
  */
 class GHNDelivery extends AbstractEntity
 {
     /**
      * @var Delivery
      *
-     * @ORM\OneToOne(targetEntity="Eccube\Entity\Delivery", inversedBy="GHNDelivery")
+     * @ORM\OneToOne(targetEntity="Eccube\Entity\Delivery", inversedBy="OSGHNDelivery")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="id", referencedColumnName="id")
      * })

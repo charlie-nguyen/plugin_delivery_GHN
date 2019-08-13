@@ -5,7 +5,7 @@
 {% block title %}{{ 'ghn.name'|trans }}{% endblock %}
 {% block sub_title %}{{ 'ghn.config.sub_title'|trans }}{% endblock %}
 
-{% form_theme form '@GHNDelivery/admin/Form/GHNCustomize.twig' %}
+{% form_theme form '@OSGHNDelivery/admin/Form/GHNCustomize.twig' %}
 
 {% block stylesheet %}{% endblock stylesheet %}
 
@@ -44,7 +44,7 @@
                     <div class="col-6">
                         <div class="c-conversionArea__leftBlockItem">
                             <a class="c-baseLink"
-                               href="{{ url('ghn_delivery_admin_config') }}">
+                               href="{{ url('osghn_delivery_admin_config') }}">
                                 <i class="fa fa-backward" aria-hidden="true"></i>
                                 <span>{{ 'admin.common.back'|trans }}</span>
                             </a>

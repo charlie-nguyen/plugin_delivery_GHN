@@ -5,14 +5,14 @@
  * Time: 3:40 PM
  */
 
-namespace Plugin\GHNDelivery\Form\Extension;
+namespace Plugin\OSGHNDelivery\Form\Extension;
 
 
 use Eccube\Entity\Delivery;
 use Eccube\Entity\Shipping;
 use Eccube\Form\Type\Shopping\ShippingType;
-use Plugin\GHNDelivery\Entity\GHNDelivery;
-use Plugin\GHNDelivery\Repository\GHNDeliveryRepository;
+use Plugin\OSGHNDelivery\Entity\GHNDelivery;
+use Plugin\OSGHNDelivery\Repository\GHNDeliveryRepository;
 use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormError;
@@ -22,7 +22,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Class ShoppingExtension
- * @package Plugin\GHNDelivery\Form\Extension
+ * @package Plugin\OSGHNDelivery\Form\Extension
  */
 class ShoppingExtension extends AbstractTypeExtension
 {

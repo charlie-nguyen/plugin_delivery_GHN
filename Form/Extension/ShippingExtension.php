@@ -5,15 +5,15 @@
  * Time: 11:15 AM
  */
 
-namespace Plugin\GHNDelivery\Form\Extension;
+namespace Plugin\OSGHNDelivery\Form\Extension;
 
 
 use Eccube\Entity\Delivery;
 use Eccube\Form\Type\Admin\ShippingType;
-use Plugin\GHNDelivery\Entity\GHNPref;
-use Plugin\GHNDelivery\Entity\GHNService;
-use Plugin\GHNDelivery\Repository\GHNDeliveryRepository;
-use Plugin\GHNDelivery\Repository\GHNServiceRepository;
+use Plugin\OSGHNDelivery\Entity\GHNPref;
+use Plugin\OSGHNDelivery\Entity\GHNService;
+use Plugin\OSGHNDelivery\Repository\GHNDeliveryRepository;
+use Plugin\OSGHNDelivery\Repository\GHNServiceRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -56,7 +56,7 @@ class ShippingExtension extends AbstractTypeExtension
             'placeholder' => '----------------',
             'eccube_form_options' => [
                 'auto_render' => true,
-                'form_theme' => '@GHNDelivery\admin\form_shipping_district.twig',
+                'form_theme' => '@OSGHNDelivery\admin\form_shipping_district.twig',
             ]
         ])
             ->addEventListener(FormEvents::POST_SUBMIT, function (FormEvent $event) use ($deliveryRepo) {

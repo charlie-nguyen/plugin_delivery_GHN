@@ -5,23 +5,23 @@
  * Time: 1:48 PM
  */
 
-namespace Plugin\GHNDelivery\Controller\Admin;
+namespace Plugin\OSGHNDelivery\Controller\Admin;
 
 
 use Eccube\Controller\AbstractController;
 use Eccube\Entity\Master\OrderStatus;
 use Eccube\Entity\Order;
 use Eccube\Entity\Shipping;
-use Plugin\GHNDelivery\Entity\GHNConfig;
-use Plugin\GHNDelivery\Entity\GHNPref;
-use Plugin\GHNDelivery\Entity\GHNWarehouse;
-use Plugin\GHNDelivery\Repository\GHNConfigRepository;
-use Plugin\GHNDelivery\Repository\GHNDeliveryRepository;
-use Plugin\GHNDelivery\Repository\GHNOrderRepository;
-use Plugin\GHNDelivery\Repository\GHNPrefRepository;
-use Plugin\GHNDelivery\Repository\GHNServiceRepository;
-use Plugin\GHNDelivery\Repository\GHNWarehouseRepository;
-use Plugin\GHNDelivery\Service\ApiService;
+use Plugin\OSGHNDelivery\Entity\GHNConfig;
+use Plugin\OSGHNDelivery\Entity\GHNPref;
+use Plugin\OSGHNDelivery\Entity\GHNWarehouse;
+use Plugin\OSGHNDelivery\Repository\GHNConfigRepository;
+use Plugin\OSGHNDelivery\Repository\GHNDeliveryRepository;
+use Plugin\OSGHNDelivery\Repository\GHNOrderRepository;
+use Plugin\OSGHNDelivery\Repository\GHNPrefRepository;
+use Plugin\OSGHNDelivery\Repository\GHNServiceRepository;
+use Plugin\OSGHNDelivery\Repository\GHNWarehouseRepository;
+use Plugin\OSGHNDelivery\Service\ApiService;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
@@ -30,7 +30,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Class OrderController
- * @package Plugin\GHNDelivery\Controller\Admin
+ * @package Plugin\OSGHNDelivery\Controller\Admin
  */
 class OrderController extends AbstractController
 {
@@ -95,7 +95,7 @@ class OrderController extends AbstractController
      * @Route(path="/%eccube_admin_route%/ghn/service/{id}", name="ghn_order_service_fee", requirements={"id"="\d+"}, methods={"POST"})
      * @Route(path="/%eccube_admin_route%/ghn/service/{id}/{index}", name="ghn_order_service_fee_index", requirements={"id"="\d+"}, methods={"POST"})
      * @Route(path="/%eccube_admin_route%/ghn/service", name="ghn_order_service_fee_no_id", methods={"POST"})
-     * @Template("@GHNDelivery/admin/order_service_ajax.twig")
+     * @Template("@OSGHNDelivery/admin/order_service_ajax.twig")
      */
     public function getServiceAndFee(Request $request, $id, $index = null)
     {

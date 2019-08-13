@@ -5,7 +5,7 @@
  * Time: 3:31 PM
  */
 
-namespace Plugin\GHNDelivery\Entity;
+namespace Plugin\OSGHNDelivery\Entity;
 
 
 use Doctrine\Common\Collections\ArrayCollection;
@@ -16,9 +16,9 @@ use Eccube\Entity\Shipping;
 
 /**
  * Class GHNPref
- * @package Plugin\GHNDelivery\Entity
+ * @package Plugin\OSGHNDelivery\Entity
  * @ORM\Table(name="plg_ghn_pref")
- * @ORM\Entity(repositoryClass="Plugin\GHNDelivery\Repository\GHNPrefRepository")
+ * @ORM\Entity(repositoryClass="Plugin\OSGHNDelivery\Repository\GHNPrefRepository")
  */
 class GHNPref extends AbstractEntity
 {
@@ -85,7 +85,7 @@ class GHNPref extends AbstractEntity
     /**
      * @var GHNWarehouse[]
      *
-     * @ORM\OneToMany(targetEntity="Plugin\GHNDelivery\Entity\GHNWarehouse", mappedBy="GHNPref")
+     * @ORM\OneToMany(targetEntity="Plugin\OSGHNDelivery\Entity\GHNWarehouse", mappedBy="GHNPref")
      */
     private $Warehouses;
 

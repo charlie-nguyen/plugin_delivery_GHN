@@ -5,22 +5,22 @@
  * Time: 4:27 PM
  */
 
-namespace Plugin\GHNDelivery\Repository;
+namespace Plugin\OSGHNDelivery\Repository;
 
 use Doctrine\Common\Persistence\ManagerRegistry;
 use Eccube\Common\EccubeConfig;
 use Eccube\Entity\Order;
 use Eccube\Entity\Shipping;
 use Eccube\Repository\AbstractRepository;
-use Plugin\GHNDelivery\Entity\GHNOrder;
-use Plugin\GHNDelivery\Entity\GHNOrderStatus;
-use Plugin\GHNDelivery\Service\ApiParserService;
-use Plugin\GHNDelivery\Service\ApiService;
+use Plugin\OSGHNDelivery\Entity\GHNOrder;
+use Plugin\OSGHNDelivery\Entity\GHNOrderStatus;
+use Plugin\OSGHNDelivery\Service\ApiParserService;
+use Plugin\OSGHNDelivery\Service\ApiService;
 use Symfony\Component\HttpFoundation\Session\Session;
 
 /**
  * Class GHNOrderRepository
- * @package Plugin\GHNDelivery\Repository
+ * @package Plugin\OSGHNDelivery\Repository
  */
 class GHNOrderRepository extends AbstractRepository
 {

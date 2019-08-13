@@ -1,25 +1,25 @@
 <?php
 
-namespace Plugin\GHNDelivery\Controller\Admin;
+namespace Plugin\OSGHNDelivery\Controller\Admin;
 
 use Eccube\Controller\AbstractController;
 use Eccube\Entity\BaseInfo;
 use Eccube\Repository\BaseInfoRepository;
-use Plugin\GHNDelivery\Entity\GHNConfig;
-use Plugin\GHNDelivery\Form\Type\Admin\ConfigType;
-use Plugin\GHNDelivery\Form\Type\Admin\WarehouseType;
-use Plugin\GHNDelivery\Repository\GHNConfigRepository;
-use Plugin\GHNDelivery\Repository\GHNPrefRepository;
-use Plugin\GHNDelivery\Repository\GHNWarehouseRepository;
-use Plugin\GHNDelivery\Service\ApiParserService;
-use Plugin\GHNDelivery\Service\ApiService;
+use Plugin\OSGHNDelivery\Entity\GHNConfig;
+use Plugin\OSGHNDelivery\Form\Type\Admin\ConfigType;
+use Plugin\OSGHNDelivery\Form\Type\Admin\WarehouseType;
+use Plugin\OSGHNDelivery\Repository\GHNConfigRepository;
+use Plugin\OSGHNDelivery\Repository\GHNPrefRepository;
+use Plugin\OSGHNDelivery\Repository\GHNWarehouseRepository;
+use Plugin\OSGHNDelivery\Service\ApiParserService;
+use Plugin\OSGHNDelivery\Service\ApiService;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Class ConfigController
- * @package Plugin\GHNDelivery\Controller\Admin
+ * @package Plugin\OSGHNDelivery\Controller\Admin
  */
 class ConfigController extends AbstractController
 {
@@ -65,8 +65,8 @@ class ConfigController extends AbstractController
     }
 
     /**
-     * @Route("/%eccube_admin_route%/ghn/config", name="ghn_delivery_admin_config")
-     * @Template("@GHNDelivery/admin/config.twig")
+     * @Route("/%eccube_admin_route%/ghn/config", name="osghn_delivery_admin_config")
+     * @Template("@OSGHNDelivery/admin/config.twig")
      */
     public function index(Request $request)
     {
@@ -99,7 +99,7 @@ class ConfigController extends AbstractController
                 return $this->redirectToRoute('ghn_delivery_admin_warehouse');
             }
 
-            return $this->redirectToRoute('ghn_delivery_admin_config');
+            return $this->redirectToRoute('osghn_delivery_admin_config');
         }
 
         return [
@@ -109,7 +109,7 @@ class ConfigController extends AbstractController
 
     /**
      * @Route("/%eccube_admin_route%/ghn/warehouse", name="ghn_delivery_admin_warehouse")
-     * @Template("@GHNDelivery/admin/warehouse.twig")
+     * @Template("@OSGHNDelivery/admin/warehouse.twig")
      */
     public function warehouse(Request $request)
     {
@@ -118,7 +118,7 @@ class ConfigController extends AbstractController
         if (!$config) {
             $this->addError('ghn.config.missing', 'admin');
 
-            return $this->redirectToRoute('ghn_delivery_admin_config');
+            return $this->redirectToRoute('osghn_delivery_admin_config');
         }
         $Warehouse = $this->warehouseRepo->getOrCreate(true);
         $form = $this->createForm(WarehouseType::class, $Warehouse);

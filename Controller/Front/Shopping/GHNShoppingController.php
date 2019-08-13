@@ -5,7 +5,7 @@
  * Time: 2:42 PM
  */
 
-namespace Plugin\GHNDelivery\Controller\Front\Shopping;
+namespace Plugin\OSGHNDelivery\Controller\Front\Shopping;
 
 use Eccube\Controller\AbstractController;
 use Eccube\Entity\Master\OrderItemType;
@@ -15,15 +15,15 @@ use Eccube\Entity\OrderItem;
 use Eccube\Entity\Shipping;
 use Eccube\Repository\DeliveryRepository;
 use Eccube\Repository\Master\OrderItemTypeRepository;
-use Plugin\GHNDelivery\Entity\GHNService;
-use Plugin\GHNDelivery\Entity\GHNWarehouse;
-use Plugin\GHNDelivery\Form\Type\Front\GHNDeliveryShoppingType;
-use Plugin\GHNDelivery\Repository\GHNConfigRepository;
-use Plugin\GHNDelivery\Repository\GHNDeliveryRepository;
-use Plugin\GHNDelivery\Repository\GHNServiceRepository;
-use Plugin\GHNDelivery\Repository\GHNWarehouseRepository;
-use Plugin\GHNDelivery\Service\ApiService;
-use Plugin\GHNDelivery\Service\PurchaseFlow\GHNProcessor;
+use Plugin\OSGHNDelivery\Entity\GHNService;
+use Plugin\OSGHNDelivery\Entity\GHNWarehouse;
+use Plugin\OSGHNDelivery\Form\Type\Front\GHNDeliveryShoppingType;
+use Plugin\OSGHNDelivery\Repository\GHNConfigRepository;
+use Plugin\OSGHNDelivery\Repository\GHNDeliveryRepository;
+use Plugin\OSGHNDelivery\Repository\GHNServiceRepository;
+use Plugin\OSGHNDelivery\Repository\GHNWarehouseRepository;
+use Plugin\OSGHNDelivery\Service\ApiService;
+use Plugin\OSGHNDelivery\Service\PurchaseFlow\GHNProcessor;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\Form\FormError;
@@ -34,7 +34,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Class GHNShoppingController
- * @package Plugin\GHNDelivery\Controller\Front\Shopping
+ * @package Plugin\OSGHNDelivery\Controller\Front\Shopping
  */
 class GHNShoppingController extends AbstractController
 {
@@ -101,7 +101,7 @@ class GHNShoppingController extends AbstractController
      *
      * @Route(path="/shopping/ghn/delivery/{id}", name="ghn_delivery_shopping", requirements={"id"="\d+"})
      * @ParamConverter("Shipping")
-     * @Template("@GHNDelivery/front/Shopping/delivery.twig")
+     * @Template("@OSGHNDelivery/front/Shopping/delivery.twig")
      */
     public function index(Request $request, Shipping $Shipping)
     {
@@ -245,7 +245,7 @@ class GHNShoppingController extends AbstractController
      *
      * @Route(path="/shopping/ghn/service/{id}", name="ghn_delivery_service_fee", requirements={"id"="\d+"}, methods={"POST"})
      * @ParamConverter("Shipping")
-     * @Template("@GHNDelivery/front/Shopping/service_ajax.twig")
+     * @Template("@OSGHNDelivery/front/Shopping/service_ajax.twig")
      */
     public function getServiceAndFee(Request $request, Shipping $Shipping)
     {

@@ -5,7 +5,7 @@
  * Time: 2:29 PM
  */
 
-namespace Plugin\GHNDelivery\Repository;
+namespace Plugin\OSGHNDelivery\Repository;
 
 
 use Doctrine\Common\Persistence\ManagerRegistry;
@@ -14,7 +14,7 @@ use Plugin\GHNDelivery\Entity\GHNDelivery;
 
 /**
  * Class GHNDeliveryRepository
- * @package Plugin\GHNDelivery\Repository
+ * @package Plugin\OSGHNDelivery\Repository
  */
 class GHNDeliveryRepository extends AbstractRepository
 {

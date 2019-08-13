@@ -5,7 +5,7 @@
  * Time: 2:52 PM
  */
 
-namespace Plugin\GHNDelivery;
+namespace Plugin\OSGHNDelivery;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Eccube\Entity\Delivery;
@@ -18,15 +18,16 @@ use Eccube\Entity\Payment;
 use Eccube\Entity\PaymentOption;
 use Eccube\Plugin\AbstractPluginManager;
 use Eccube\Repository\Master\PrefRepository;
-use Plugin\GHNDelivery\Entity\GHNConfig;
-use Plugin\GHNDelivery\Entity\GHNDelivery;
-use Plugin\GHNDelivery\Repository\GHNConfigRepository;
-use Plugin\GHNDelivery\Repository\GHNDeliveryRepository;
+use Eccube\Repository\DeliveryRepository;
+use Plugin\OSGHNDelivery\Entity\GHNConfig;
+use Plugin\OSGHNDelivery\Entity\GHNDelivery;
+use Plugin\OSGHNDelivery\Repository\GHNConfigRepository;
+use Plugin\OSGHNDelivery\Repository\GHNDeliveryRepository;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Class PluginManager
- * @package Plugin\GHNDelivery
+ * @package Plugin\OSGHNDelivery
  */
 class PluginManager extends AbstractPluginManager
 {
@@ -88,19 +89,21 @@ class PluginManager extends AbstractPluginManager
     {
         /** @var EntityManagerInterface $em */
         $em = $container->get('doctrine.orm.entity_manager');
-        $configRepo = $container->get(GHNDeliveryRepository::class);
-        /** @var GHNDelivery[] $config */
-        $config = $configRepo->findAll();
-        foreach ($config as $GHNDelivery) {
-            foreach ($GHNDelivery->getDelivery()->getDeliveryFees() as $deliveryFee) {
+
+        $tableNameGHNDelivery = $em->getClassMetadata(GHNDelivery::class)->getTableName();
+        $conn = $em->getConnection();
+        $sql = 'SELECT * FROM ' . $tableNameGHNDelivery;
+        $ghnDelivery = $conn->fetchAll($sql);
+        foreach($ghnDelivery as $item) {
+            $ecDelivery = $container->get(DeliveryRepository::class)->find($item['id']);
+            foreach ($ecDelivery->getDeliveryFees() as $deliveryFee) {
                 $em->remove($deliveryFee);
             }
-            $delivery = $GHNDelivery->getDelivery();
-            $delivery->setVisible(false);
-            $delivery->setName("Giao hàng nhanh - Đã xóa");
-            $em->remove($GHNDelivery);
-            $em->persist($delivery);
+            $ecDelivery->setVisible(false);
+            $ecDelivery->setName("Giao hàng nhanh - Đã xóa");
+            $em->persist($ecDelivery);
         }
+
         $em->flush();
     }
 
@@ -170,7 +173,7 @@ class PluginManager extends AbstractPluginManager
         $page = new Page();
         $page->setName("Giao hàng nhanh - Tính phí")
             ->setUrl('ghn_delivery_shopping')
-            ->setFileName("@GHNDelivery/front/Shopping/delivery.twig")
+            ->setFileName("@OSGHNDelivery/front/Shopping/delivery.twig")
             ->setEditType(Page::EDIT_TYPE_DEFAULT);
         $em->persist($page);
         $em->flush($page);

@@ -5,7 +5,7 @@
  * Time: 4:58 PM
  */
 
-namespace Plugin\GHNDelivery\Entity;
+namespace Plugin\OSGHNDelivery\Entity;
 
 use Eccube\Entity\AbstractEntity;
 use Doctrine\ORM\Mapping as ORM;
@@ -14,10 +14,10 @@ use Eccube\Entity\Shipping;
 /**
  * Class Warehouse
  *
- * @package Plugin\GHNDelivery\Entity
+ * @package Plugin\OSGHNDelivery\Entity
  *
  * @ORM\Table(name="plg_ghn_warehouse")
- * @ORM\Entity(repositoryClass="Plugin\GHNDelivery\Repository\GHNWarehouseRepository")
+ * @ORM\Entity(repositoryClass="Plugin\OSGHNDelivery\Repository\GHNWarehouseRepository")
  */
 class GHNWarehouse extends AbstractEntity
 {
@@ -54,7 +54,7 @@ class GHNWarehouse extends AbstractEntity
     /**
      * @var GHNPref
      *
-     * @ORM\ManyToOne(targetEntity="Plugin\GHNDelivery\Entity\GHNPref", inversedBy="Warehouses")
+     * @ORM\ManyToOne(targetEntity="Plugin\OSGHNDelivery\Entity\GHNPref", inversedBy="Warehouses")
      * @ORM\JoinColumns(
      *     @ORM\JoinColumn(name="ghn_pref_id", referencedColumnName="id")
      * )

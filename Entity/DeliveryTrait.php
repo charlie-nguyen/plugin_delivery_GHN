@@ -5,14 +5,14 @@
  * Time: 11:22 AM
  */
 
-namespace Plugin\GHNDelivery\Entity;
+namespace Plugin\OSGHNDelivery\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Eccube\Annotation as Eccube;
 
 /**
  * Trait DeliveryTrait
- * @package Plugin\GHNDelivery\Entity
+ * @package Plugin\OSGHNDelivery\Entity
  *
  * @Eccube\EntityExtension("Eccube\Entity\Delivery")
  */
@@ -21,7 +21,7 @@ trait DeliveryTrait
     /**
      * @var GHNDelivery
      *
-     * @ORM\OneToOne(targetEntity="Plugin\GHNDelivery\Entity\GHNDelivery", mappedBy="Delivery")
+     * @ORM\OneToOne(targetEntity="Plugin\OSGHNDelivery\Entity\GHNDelivery", mappedBy="Delivery")
      */
     private $GHNDelivery;
 

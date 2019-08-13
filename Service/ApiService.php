@@ -5,17 +5,17 @@
  * Time: 5:34 PM
  */
 
-namespace Plugin\GHNDelivery\Service;
+namespace Plugin\OSGHNDelivery\Service;
 
 
 use Eccube\Common\Constant;
 use Eccube\Common\EccubeConfig;
 use Eccube\Entity\BaseInfo;
 use Eccube\Repository\BaseInfoRepository;
-use Plugin\GHNDelivery\Entity\GHNConfig;
-use Plugin\GHNDelivery\Entity\GHNOrder;
-use Plugin\GHNDelivery\Entity\GHNWarehouse;
-use Plugin\GHNDelivery\Repository\GHNConfigRepository;
+use Plugin\OSGHNDelivery\Entity\GHNConfig;
+use Plugin\OSGHNDelivery\Entity\GHNOrder;
+use Plugin\OSGHNDelivery\Entity\GHNWarehouse;
+use Plugin\OSGHNDelivery\Repository\GHNConfigRepository;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class ApiService

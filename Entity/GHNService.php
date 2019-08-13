@@ -5,7 +5,7 @@
  * Time: 4:26 PM
  */
 
-namespace Plugin\GHNDelivery\Entity;
+namespace Plugin\OSGHNDelivery\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Eccube\Entity\AbstractEntity;
@@ -17,7 +17,7 @@ use Eccube\Entity\Shipping;
  * User service get from api
  *
  * @ORM\Table(name="plg_ghn_delivery_service")
- * @ORM\Entity(repositoryClass="Plugin\GHNDelivery\Repository\GHNServiceRepository")
+ * @ORM\Entity(repositoryClass="Plugin\OSGHNDelivery\Repository\GHNServiceRepository")
  */
 class GHNService extends AbstractEntity
 {

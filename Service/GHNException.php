@@ -5,7 +5,7 @@
  * Time: 11:07 AM
  */
 
-namespace Plugin\GHNDelivery\Service;
+namespace Plugin\OSGHNDelivery\Service;
 
 
 use Throwable;

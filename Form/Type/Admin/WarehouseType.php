@@ -1,10 +1,10 @@
 <?php
 
-namespace Plugin\GHNDelivery\Form\Type\Admin;
+namespace Plugin\OSGHNDelivery\Form\Type\Admin;
 
 use Eccube\Common\EccubeConfig;
-use Plugin\GHNDelivery\Entity\GHNPref;
-use Plugin\GHNDelivery\Entity\GHNWarehouse;
+use Plugin\OSGHNDelivery\Entity\GHNPref;
+use Plugin\OSGHNDelivery\Entity\GHNWarehouse;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -17,7 +17,7 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 
 /**
  * Class WarehouseType
- * @package Plugin\GHNDelivery\Form\Type\Admin
+ * @package Plugin\OSGHNDelivery\Form\Type\Admin
  */
 class WarehouseType extends AbstractType
 {

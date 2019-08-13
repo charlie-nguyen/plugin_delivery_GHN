@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\GHNDelivery;
+namespace Plugin\OSGHNDelivery;
 
 use Eccube\Common\EccubeNav;
 

@@ -5,15 +5,15 @@
  * Time: 4:27 PM
  */
 
-namespace Plugin\GHNDelivery\Repository;
+namespace Plugin\OSGHNDelivery\Repository;
 
 
 use Doctrine\Common\Persistence\ManagerRegistry;
 use Eccube\Common\EccubeConfig;
 use Eccube\Entity\Shipping;
 use Eccube\Repository\AbstractRepository;
-use Plugin\GHNDelivery\Entity\GHNService;
-use Plugin\GHNDelivery\Service\ApiService;
+use Plugin\OSGHNDelivery\Entity\GHNService;
+use Plugin\OSGHNDelivery\Service\ApiService;
 use Symfony\Component\HttpFoundation\Session\Session;
 
 class GHNServiceRepository extends AbstractRepository

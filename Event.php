@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\GHNDelivery;
+namespace Plugin\OSGHNDelivery;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Eccube\Common\EccubeConfig;
@@ -11,14 +11,14 @@ use Eccube\Entity\Shipping;
 use Eccube\Event\EccubeEvents;
 use Eccube\Event\EventArgs;
 use Eccube\Event\TemplateEvent;
-use Plugin\GHNDelivery\Entity\GHNConfig;
-use Plugin\GHNDelivery\Repository\GHNConfigRepository;
-use Plugin\GHNDelivery\Repository\GHNDeliveryRepository;
-use Plugin\GHNDelivery\Repository\GHNOrderRepository;
-use Plugin\GHNDelivery\Repository\GHNServiceRepository;
-use Plugin\GHNDelivery\Repository\GHNWarehouseRepository;
-use Plugin\GHNDelivery\Service\ApiService;
-use Plugin\GHNDelivery\Service\PurchaseFlow\GHNProcessor;
+use Plugin\OSGHNDelivery\Entity\GHNConfig;
+use Plugin\OSGHNDelivery\Repository\GHNConfigRepository;
+use Plugin\OSGHNDelivery\Repository\GHNDeliveryRepository;
+use Plugin\OSGHNDelivery\Repository\GHNOrderRepository;
+use Plugin\OSGHNDelivery\Repository\GHNServiceRepository;
+use Plugin\OSGHNDelivery\Repository\GHNWarehouseRepository;
+use Plugin\OSGHNDelivery\Service\ApiService;
+use Plugin\OSGHNDelivery\Service\PurchaseFlow\GHNProcessor;
 use Symfony\Bundle\FrameworkBundle\Controller\ControllerTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -112,7 +112,7 @@ class Event implements EventSubscriberInterface
         $order = $event->getParameter('Order');
         $ghnOrder = $this->ghnOrderRepo->findBy(['Order' => $order]);
         $event->setParameter('GHNOrders', $ghnOrder);
-        $event->addSnippet('@GHNDelivery/admin/render_order.twig');
+        $event->addSnippet('@OSGHNDelivery/admin/render_order.twig');
     }
 
     public function calcGHNServeFeeMultiShipping(EventArgs $eventArgs)

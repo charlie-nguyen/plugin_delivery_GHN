@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\GHNDelivery\Entity;
+namespace Plugin\OSGHNDelivery\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Eccube\Entity\AbstractEntity;
@@ -9,7 +9,7 @@ use Eccube\Entity\AbstractEntity;
  * Config
  *
  * @ORM\Table(name="plg_ghn_delivery_config")
- * @ORM\Entity(repositoryClass="Plugin\GHNDelivery\Repository\GHNConfigRepository")
+ * @ORM\Entity(repositoryClass="Plugin\OSGHNDelivery\Repository\GHNConfigRepository")
  */
 class GHNConfig extends AbstractEntity
 {

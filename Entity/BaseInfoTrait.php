@@ -5,13 +5,13 @@
  * Time: 4:50 PM
  */
 
-namespace Plugin\GHNDelivery\Entity;
+namespace Plugin\OSGHNDelivery\Entity;
 
 use Eccube\Annotation as Eccube;
 
 /**
  * Trait BaseInfoTrait
- * @package Plugin\GHNDelivery\Entity
+ * @package Plugin\OSGHNDelivery\Entity
  *
  * @Eccube\EntityExtension("Eccube\Entity\BaseInfo")
  */

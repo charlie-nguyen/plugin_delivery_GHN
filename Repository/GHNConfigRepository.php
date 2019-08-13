@@ -1,12 +1,12 @@
 <?php
 
-namespace Plugin\GHNDelivery\Repository;
+namespace Plugin\OSGHNDelivery\Repository;
 
 use Eccube\Common\EccubeConfig;
 use Eccube\Entity\BaseInfo;
 use Eccube\Repository\AbstractRepository;
 use Eccube\Repository\BaseInfoRepository;
-use Plugin\GHNDelivery\Entity\GHNConfig;
+use Plugin\OSGHNDelivery\Entity\GHNConfig;
 use Symfony\Bridge\Doctrine\ManagerRegistry;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;

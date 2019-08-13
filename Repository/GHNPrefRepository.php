@@ -1,13 +1,13 @@
 <?php
 
-namespace Plugin\GHNDelivery\Repository;
+namespace Plugin\OSGHNDelivery\Repository;
 
 use Eccube\Repository\AbstractRepository;
-use Plugin\GHNDelivery\Entity\GHNPref;
+use Plugin\OSGHNDelivery\Entity\GHNPref;
 
 /**
  * Class GHNPrefRepository
- * @package Plugin\GHNDelivery\Repository
+ * @package Plugin\OSGHNDelivery\Repository
  */
 class GHNPrefRepository extends AbstractRepository
 {
